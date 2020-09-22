@@ -445,8 +445,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="details">
 <span id="author" class="author">Thomas Nilefalk</span><br>
 <span id="email" class="email"><a href="mailto:thomas@alanif.se">thomas@alanif.se</a></span><br>
-<span id="revnumber">alan Beta7,</span>
-<span id="revdate">October 12, 2020</span>
+<span id="revnumber">alan Beta8-snapshot,</span>
+<span id="revdate">September 22, 2020</span>
 <br><span id="revremark">New AsciiDoc Reprint</span>
 </div>
 <div id="toc" class="toc2">
@@ -7797,11 +7797,30 @@ Each filter must enumerate the Set of values to a compatible Set, e.g. using two
 <h3 id="_comments"><a class="anchor" href="#_comments"></a>4.1. Comments</h3>
 <div class="paragraph">
 <p>Comments may be placed anywhere in the Alan source.
-A comment starts with double hyphens (<code>--</code>) and extends to the end of the line.</p>
+There are two types of comments, a line comment and a block comment.</p>
+</div>
+<div class="paragraph">
+<p>A line comment starts with double hyphens (<code>--</code>) and extends to the end of the line.</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code data-lang="alan" class="language-alan hljs">-- This is a comment</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>A block comment can be used to comment out longer sections of Alan code.
+The first (ignored) line of a block comment is a line where the first four characters are forward slashes, it may then be followed by anything.
+The block comment ends with the first line that has four slashes in the first columns.
+It may be follwed by more slashes, but nothing else.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="alan" class="language-alan hljs">//// This line starts a block comment ////
+These lines will be
+completely ignored.
+//// So will this line ////
+The block comment will end after the following line
+////////////////////////////////</code></pre>
 </div>
 </div>
 </div>
@@ -13008,7 +13027,7 @@ For more info on stropping, see <a href="https://en.wikipedia.org/wiki/Stropping
 </div>
 <div id="footer">
 <div id="footer-text">
-ALAN Beta7<br>
+ALAN Beta8-snapshot<br>
 </div>
 </div>
 <link rel="stylesheet" href="../_assets/hjs/styles/github.min.css">
